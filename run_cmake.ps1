@@ -10,7 +10,7 @@ else {
 }
 
 # cmake configure命令
-cmake.exe --no-warn-unused-cli `
+cmake.exe `
 -DCMAKE_BUILD_TYPE:STRING=Debug `
 -DCMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE `
 -S. `

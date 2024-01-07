@@ -1,11 +1,19 @@
 cmake_minimum_required(VERSION 3.16.3)
-project(practice VERSION 0.1.0 LANGUAGES C CXX)
+message("before project")
+message("CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
+message("CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
+message("CMAKE_SYSTEM_VERSION: ${CMAKE_SYSTEM_VERSION}")
+message("CMAKE_CXX_COMPILER: ${CMAKE_CXX_COMPILER}")
 
-include(CTest)
-enable_testing()
+project(practice VERSION 0.1.0 LANGUAGES C CXX)
+message("after project")
+message("CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
+message("CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
+message("CMAKE_SYSTEM_VERSION: ${CMAKE_SYSTEM_VERSION}")
+message("CMAKE_CXX_COMPILER: ${CMAKE_CXX_COMPILER}")
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_executable(practice main.cpp)
-
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
