@@ -4,9 +4,7 @@
 #include "leetcode.h"
 
 /* 两数之和 */
-
-vector<int> Solution::twoSum(vector<int> &nums, int target)
+int add(int a, int b)
 {
-
-    return vector<int>();
+    return a + b;
 }

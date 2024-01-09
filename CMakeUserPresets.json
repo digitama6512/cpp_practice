@@ -4,21 +4,7 @@
     {
       "name": "vcpkg_LLVM_MinGw",
       "generator": "MinGW Makefiles",
-      "binaryDir": "build",
-      "cacheVariables": {
-        "CMAKE_C_COMPILER": {
-          "type": "FILEPATH",
-          "value": "C:/mingw64/bin/gcc.exe"
-        },
-        "CMAKE_CXX_COMPILER": {
-          "type": "FILEPATH",
-          "value": "C:/mingw64/bin/g++.exe"
-        },
-        "CMAKE_MAKE_PROGRAM": {
-          "type": "FILEPATH",
-          "value": "C:/mingw64/bin/mingw32-make.exe"
-        }
-      }
+      "binaryDir": "build"
     }
   ]
 }
