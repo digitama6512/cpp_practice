@@ -3,7 +3,10 @@
 //
 #include "leetcode.h"
 
-int add(int a, int b)
+/* 两数之和 */
+
+vector<int> Solution::twoSum(vector<int> &nums, int target)
 {
-    return a + b;
+
+    return vector<int>();
 }
