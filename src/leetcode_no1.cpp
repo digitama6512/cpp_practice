@@ -1,5 +1,5 @@
 #include "leetcode.h"
-#include "gtest/gtest.h"
+//#include "gtest/gtest.h"
 #include <iostream>
 
 int main(int, char **)

@@ -7,11 +7,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 
-find_package(GTest CONFIG REQUIRED)
-enable_testing()
-include(GoogleTest)
+#find_package(GTest CONFIG REQUIRED)
+#enable_testing()
+#include(GoogleTest)
 
 add_subdirectory(libraries)
 
 add_executable(leetcode_no1 ${CMAKE_CURRENT_SOURCE_DIR}/src/leetcode_no1.cpp)
-target_link_libraries(leetcode_no1 PRIVATE leetcode GTest::gtest_main)
+target_link_libraries(leetcode_no1 PRIVATE leetcode)
