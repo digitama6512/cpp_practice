@@ -1,19 +1,17 @@
-cmake_minimum_required(VERSION 3.16.3)
-message("before project")
-message("CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
-message("CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
-message("CMAKE_SYSTEM_VERSION: ${CMAKE_SYSTEM_VERSION}")
-message("CMAKE_CXX_COMPILER: ${CMAKE_CXX_COMPILER}")
+cmake_minimum_required(VERSION 3.18)
 
-project(practice VERSION 0.1.0 LANGUAGES C CXX)
-message("after project")
-message("CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
-message("CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
-message("CMAKE_SYSTEM_VERSION: ${CMAKE_SYSTEM_VERSION}")
-message("CMAKE_CXX_COMPILER: ${CMAKE_CXX_COMPILER}")
+project(practice VERSION 0.1.0 LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(practice main.cpp)
+
+find_package(GTest CONFIG REQUIRED)
+enable_testing()
+include(GoogleTest)
+
+add_subdirectory(libraries)
+
+add_executable(leetcode_no1 ${CMAKE_CURRENT_SOURCE_DIR}/src/leetcode_no1.cpp)
+target_link_libraries(leetcode_no1 PRIVATE leetcode GTest::gtest_main)
