@@ -8,4 +8,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 add_subdirectory(libraries)
 
+include(CTest)
+enable_testing()
 add_subdirectory(mytest)

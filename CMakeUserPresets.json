@@ -2,9 +2,64 @@
   "version": 3,
   "configurePresets": [
     {
-      "name": "vcpkg_LLVM_MinGw",
+      "name": "MinGW_Debug",
       "generator": "MinGW Makefiles",
-      "binaryDir": "build"
+      "binaryDir": "build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "MinGW_Release",
+      "generator": "MinGW Makefiles",
+      "binaryDir": "build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "Unix_Debug",
+      "generator": "Unix Makefiles",
+      "binaryDir": "build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "Unix_Release",
+      "generator": "Unix Makefiles",
+      "binaryDir": "build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "MinGW_Debug",
+      "configurePreset": "MinGW_Debug"
+    },
+    {
+      "name": "MinGW_Release",
+      "configurePreset": "MinGW_Release"
+    },
+    {
+      "name": "Unix_Debug",
+      "configurePreset": "Unix_Debug"
+    },
+    {
+      "name": "Unix_Release",
+      "configurePreset": "Unix_Release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "MinGW_base",
+      "configurePreset": "MinGW_Debug"
+    },
+    {
+      "name": "Unix_base",
+      "configurePreset": "Unix_Debug"
     }
   ]
 }

@@ -9,9 +9,8 @@ FetchContent_Declare(
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(googletest)
 
-enable_testing()
 add_executable(leetcode_no1 ${CMAKE_CURRENT_SOURCE_DIR}/src/leetcode_no1.cpp)
 target_link_libraries(leetcode_no1 PRIVATE leetcode GTest::gtest_main)
 
 include(GoogleTest)
-# gtest_discover_tests(leetcode_no1)
+gtest_discover_tests(leetcode_no1)
